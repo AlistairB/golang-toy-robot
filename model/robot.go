@@ -2,21 +2,21 @@ package model
 
 type Table struct {
 	maxCoordinate Coordinate
-	robot *Robot
+	robot         *Robot
 }
 
 type Direction int
 
 const (
-    North Direction = iota
-    East
-    South
-    West
+	North Direction = iota
+	East
+	South
+	West
 )
 
 type Robot struct {
 	position Coordinate
-	facing Direction
+	facing   Direction
 }
 
 type Coordinate struct {

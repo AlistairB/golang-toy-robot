@@ -1,7 +1,7 @@
-module toy-robot
+module golang-toy-robot
 
 go 1.16
 
-require (
-  toy-robot/src/main
-)
+// require (
+//   "golang-toy-robot/main"
+// )
