@@ -1,6 +1,6 @@
 package model
 
 type Robot struct {
-	position Coordinate
-	facing   Direction
+	Position Coordinate
+	Facing   Direction
 }
