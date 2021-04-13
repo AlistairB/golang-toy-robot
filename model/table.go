@@ -6,5 +6,7 @@ type Table struct {
 }
 
 func PlaceRobot(table Table, robot Robot) Table {
-	return Table{table.maxCoordinate, &robot}
+	table.robot = &robot
+	
+	return table
 }
