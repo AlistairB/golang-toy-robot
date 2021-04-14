@@ -2,9 +2,10 @@ package processing
 
 import (
 	"golang-toy-robot/model"
+	"fmt"
 )
 
-func processCommand(table model.Table, command model.Command) model.Table {
+func ProcessCommand(table model.Table, command model.Command) model.Table {
 	switch c := command.(type) {
 	case model.PlaceCommand:
 		if coordinateInBounds(c.Coordinate, table.MaxCoordinate) {
@@ -23,13 +24,11 @@ func processCommand(table model.Table, command model.Command) model.Table {
 			updatedRobot := move(*table.Robot, table.MaxCoordinate)
 			table.Robot = &updatedRobot
 		}
+	case model.ReportCommand:
+		if table.Robot != nil {
+			fmt.Println(reportRobot(*table.Robot))
+		}
 	}
 
 	return table
 }
-
-// func PlaceRobot(table Table, robot Robot) Table {
-// 	table.robot = &robot
-
-// 	return table
-// }

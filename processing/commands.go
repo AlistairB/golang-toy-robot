@@ -4,7 +4,7 @@ import (
 	"golang-toy-robot/model"
 )
 
-func parseCommand(input string) *model.Command {
+func ParseCommand(input string) model.Command {
 	var result model.Command
 
 	switch input {
@@ -18,5 +18,5 @@ func parseCommand(input string) *model.Command {
 		result = model.ReportCommand{}
 	}
 
-	return &result
+	return result
 }
