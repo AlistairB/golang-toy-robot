@@ -28,7 +28,7 @@ func ParseCommand(input string) model.Command {
 var matchPlace = regexp.MustCompile(`^PLACE\s(?P<X>\d+),(?P<Y>\d+),(?P<Facing>[A-Z]+)$`)
 
 func parsePlace(input string) model.Command {
-	parseResult := matchPlace.FindStringSubmatch(`PLACE 1,1,NORTH`)
+	parseResult := matchPlace.FindStringSubmatch(input)
 
 	if len(parseResult) == 4 {
 		parsedX := parseCoordinateAxis(parseResult[1])
@@ -63,10 +63,10 @@ func parseFacing(input string) *model.Direction {
 	case "EAST":
 		d := model.East
 		result = &d
-	case "South":
+	case "SOUTH":
 		d := model.South
 		result = &d
-	case "West":
+	case "WEST":
 		d := model.West
 		result = &d
 	}
