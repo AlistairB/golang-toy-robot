@@ -70,13 +70,13 @@ func reportRobot(robot model.Robot) string {
 
 	switch robot.Facing {
 	case model.North:
-		facingAsString = "North"
+		facingAsString = "NORTH"
 	case model.West:
-		facingAsString = "West"
+		facingAsString = "WEST"
 	case model.South:
-		facingAsString = "South"
+		facingAsString = "SOUTH"
 	case model.East:
-		facingAsString = "East"
+		facingAsString = "EAST"
 	}
 
 	return fmt.Sprintf("%d,%d,%s", robot.Position.X, robot.Position.Y, facingAsString)

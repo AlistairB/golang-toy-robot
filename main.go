@@ -13,6 +13,7 @@ func main() {
 
 	for {
 		readCommandAsText := ""
+
 		fmt.Scanln(readCommandAsText)
 
 		toRunCommand := processing.ParseCommand(readCommandAsText)
