@@ -45,11 +45,11 @@ func move(robot model.Robot, maxCoordinate model.Coordinate) model.Robot {
 	switch robot.Facing {
 	case model.North:
 		newCoordinate.Y += 1
-	case model.West:
+	case model.East:
 		newCoordinate.X += 1
 	case model.South:
 		newCoordinate.Y -= 1
-	case model.East:
+	case model.West:
 		newCoordinate.X -= 1
 	}
 
