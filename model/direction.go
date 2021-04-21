@@ -23,6 +23,5 @@ func (c Direction) String() string {
 		result = "WEST"
 	}
 
-
 	return result
 }

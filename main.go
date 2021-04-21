@@ -1,15 +1,15 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
-	"os"
+	"fmt"
 	"golang-toy-robot/model"
 	"golang-toy-robot/processing"
+	"os"
 )
 
 func main() {
-	table := model.Table{ MaxCoordinate: model.Coordinate{5,5}, Robot: nil}
+	table := model.Table{MaxCoordinate: model.Coordinate{5, 5}, Robot: nil}
 
 	scanner := bufio.NewScanner(os.Stdin)
 

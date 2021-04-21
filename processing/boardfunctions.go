@@ -1,8 +1,8 @@
 package processing
 
 import (
-	"golang-toy-robot/model"
 	"fmt"
+	"golang-toy-robot/model"
 )
 
 func turnRight(direction model.Direction) model.Direction {
@@ -62,7 +62,7 @@ func move(robot model.Robot, maxCoordinate model.Coordinate) model.Robot {
 
 func coordinateInBounds(coordinate model.Coordinate, maxCoordinate model.Coordinate) bool {
 	return coordinate.X >= 1 && coordinate.X <= maxCoordinate.X &&
-		   coordinate.Y >= 1 && coordinate.Y <= maxCoordinate.Y
+		coordinate.Y >= 1 && coordinate.Y <= maxCoordinate.Y
 }
 
 func reportRobot(robot model.Robot) string {

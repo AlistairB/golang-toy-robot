@@ -36,7 +36,7 @@ func parsePlace(input string) model.Command {
 		parsedFacing := parseFacing(parseResult[3])
 
 		if parsedX != nil && parsedY != nil && parsedFacing != nil {
-			return model.PlaceCommand{ Coordinate: model.Coordinate{ X: *parsedX, Y: *parsedY }, Facing: *parsedFacing }
+			return model.PlaceCommand{Coordinate: model.Coordinate{X: *parsedX, Y: *parsedY}, Facing: *parsedFacing}
 		}
 	}
 

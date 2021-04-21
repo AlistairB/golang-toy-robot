@@ -1,8 +1,8 @@
 package processing
 
 import (
-	"golang-toy-robot/model"
 	"fmt"
+	"golang-toy-robot/model"
 )
 
 func ProcessCommand(table model.Table, command model.Command) model.Table {
